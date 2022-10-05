@@ -67,9 +67,8 @@ print('-' * 50)
 a = [1]
 b = [1]
 
-a1 = str(a)
-b1 = str(b)
-a1 = b1
+a1 = bool(a)
+b1 = bool(b)
 
 print('-' * 50)
 
