@@ -1,5 +1,5 @@
-ponchik = 'пончик'
-pirojok = 'пирожок'
+ponchik = input('Напишите слово: Пончик- ')
+pirojok = input('Отлично теперь слово: Пирожок- ')
 
 s_file = open('pechat.txt', 'w')
 menu = print('!Покупай %(pir)s, выбирай %(pon)s?' %
