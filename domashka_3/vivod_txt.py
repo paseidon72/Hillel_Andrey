@@ -16,3 +16,4 @@ super_menu = print('!Покупай {1}, выбирай {0}?'
 mega_menu = print(F'!Покупай {pirojok.upper()}, выбирай {ponchik.capitalize()}?',
                   sep='<<>>', end='', file=s_file)
 s_file.close()
+
