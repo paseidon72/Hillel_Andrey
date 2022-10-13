@@ -2,6 +2,8 @@
 n = int(input())
 summa = 0
 for i in range(n+1):
+    if (i % 3 == 0):
+        continue
     summa += i**3
 print(summa)
 
