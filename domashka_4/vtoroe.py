@@ -11,9 +11,10 @@ i = 1
 rs = 0
 while i <= n:
     if i % 3 == 0:
+        i += 1
         continue
-    rs = rs + i**3
-    i += 1
+    else:
+        rs = rs + i ** 3
 print(rs)
 
 
