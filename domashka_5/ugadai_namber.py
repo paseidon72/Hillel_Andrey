@@ -1,3 +1,4 @@
+
 import random
 random_value = random.randint(0, 10)
 print("komp zagdal chislo ot 0 do 10 est tolko 3 popytke chtoby ugadat chislo")
