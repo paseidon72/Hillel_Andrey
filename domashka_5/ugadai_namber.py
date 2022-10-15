@@ -1,18 +1,18 @@
 
 import random
 random_value = random.randint(0, 10)
-print("komp zagdal chislo ot 0 do 10 est tolko 3 popytke chtoby ugadat chislo")
+print("Компьютер загадал число oот 0 до 10 у тебя 3 попытке угадать его")
 for i in range(1, 4):
-    choice = int(input("Start pishi chislo: "))
+    choice = int(input("Пиши число: "))
     if choice > random_value:
-        print("perebor")
+        print("Перебор")
     elif choice < random_value:
-        print("malovato")
+        print("Маловато")
     else:
-        print(f"Super {i} popitky i ty ugadal")
+        print(f"Супер {i} попытки и ты угадал")
         break
 
-    print(f"Ostalos eshe {3 - i} popitky")
+    print(f"Еще есть {3 - i} попытки")
 else:
-    print(f"Vse 3 popitky ischerpany. Chislo compa bilo {random_value}")
+    print(f"Все попытки исчерпаны. Число компьтера {random_value}")
 
