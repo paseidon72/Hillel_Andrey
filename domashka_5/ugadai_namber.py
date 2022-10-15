@@ -1,7 +1,6 @@
 import random
 random_value = random.randint(0, 10)
 print("komp zagdal chislo ot 0 do 10 est tolko 3 popytke chtoby ugadat chislo")
-print(random_value)
 for i in range(1, 4):
     choice = int(input("Start pishi chislo: "))
     if choice > random_value:
