@@ -11,7 +11,7 @@ for i in range(1, 4):
     else:
         print(f"Супер {i} попытки и ты угадал это число! {random_value}")
         break
-
+        
     print(f"Еще есть {3 - i} попытки")
 else:
     print(f"Все попытки исчерпаны. Число компьтера {random_value}")
