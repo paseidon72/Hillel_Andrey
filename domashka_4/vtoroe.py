@@ -7,7 +7,6 @@ for i in range(namber+1):
     summa += i**3
 print(summa)
 
-
 i = 0
 rs = 0
 while i < namber:
