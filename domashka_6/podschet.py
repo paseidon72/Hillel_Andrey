@@ -8,5 +8,5 @@ def dickt(string):
     return k
 
 
-list = [1, 1, 1, 3, 3, 4, 5, 6, 6, 6]
+list = [1, 1, 1, 1, 3, 4, 5, 5, 6, 6]
 print(dickt(list))
