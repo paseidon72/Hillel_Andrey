@@ -6,3 +6,4 @@
 
 result = map(lambda x: str(x), [1, 2, 'rr', 5, 65, 'tyu'])
 print(list(result))
+
