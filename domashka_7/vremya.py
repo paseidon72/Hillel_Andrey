@@ -1,3 +1,4 @@
+#Написать декоратор к 2-м любым функциям, который бы считал и выводил время их выполнения.
 import time
 
 
@@ -16,7 +17,7 @@ def my_decorator(a_function):
 
 @my_decorator
 def alone_func():
-    print(list(range(1, 10)))
+    print(list(range(1, 10, 2)))
 end_time = datetime.now()
 print('Duration: {}'.format(end_time - start_time))
 
@@ -32,7 +33,8 @@ def my_decorator2(a_function):
     return wraper
 @my_decorator2
 def other_func():
-    print('text4')
+    line = "=" * 40
+    print(line)
 
 
 alone_func()

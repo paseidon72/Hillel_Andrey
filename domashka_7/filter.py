@@ -4,11 +4,8 @@
 
 inputdata = ['Страна', 'шалаш', 'Летел', 'вертолёт', 'УЧУ', 'мэм', 'язык']
 
-
 def slova(inputdata):
     return inputdata == inputdata[::-1]
-
-
 
 res = list(filter(slova, inputdata))
 print(res)
