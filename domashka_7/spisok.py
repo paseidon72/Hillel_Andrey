@@ -7,5 +7,5 @@
 result = map(lambda x: str(x), [1, 2, 'rr', 5, 65, 'tyu'])
 print(list(result))
 
-result2 = map(lambda x: str(x) if type(x) == int else str(x), [1, 2, 'rr', 5, 65, 'tyu'])
+result2 = map(lambda x: str(x) if type(x) == int else x, [1, 2, 'rr', 5, 65, 'tyu'])
 print(list(result2))
