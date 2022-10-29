@@ -1,10 +1,11 @@
 import time
 
+
 def timeit(f):
     def inner(*args, **kwargs):
         start = time.time()
         res = f(*args, **kwargs)
-        end = time.time()
+        end =  time.time()
         print(f'{end - start} seconds')
         return res
     return inner
