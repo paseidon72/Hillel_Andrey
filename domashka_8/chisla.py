@@ -25,9 +25,19 @@ def check_user_input(input):
             print("Вы ввели не корректное число = ", input1)
 
 
-input1 = input("Ввудите ваше секретное число ")
-input1 = input1.replace(',', '.')
-check_user_input(input1)
+while True:
+    print('-' * 50)
+    input1 = input("Введите ваше секретное число ")
+    input1 = input1.replace(',', '.')
+    check_user_input(input1)
+    print('-' * 50)
+    answer = input('Чтобы выйти пишите слово (выход/exit/quit/e/q):')
+    if answer.upper() in ('ВЫХОД', 'EXIT', 'QUIT', 'E', 'Q'):
+        break
+
+
+
+
 
 
 
