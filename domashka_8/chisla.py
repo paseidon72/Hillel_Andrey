@@ -1,18 +1,9 @@
-#chislo = "1,15"
-#chislo = chislo.replace(',', '.')
-#print(chislo)
-
-#number1 = input("Enter number and hit enter ")
-#print("Printing type of input value")
-#print("type of number ", type(number1))
-
-
 def check_user_input(input):
     try:
         val = int(input)
         if(val > 0):
             print("Вы ввели целое положительное число. = ", val)
-        if(val == 0):
+        elif (val == 0):
             print("Вы ввели число. = ", val)
         else:
             print("Вы ввели целое отрицательное число. = ", val)
@@ -25,6 +16,8 @@ def check_user_input(input):
                 print("Вы ввели дробное отрицательное число = ", val)
         except ValueError:
             print("Вы ввели не корректное число = ", input1)
+
+
 
 
 while True:
@@ -43,8 +36,3 @@ while True:
 
 
 
-#input2 = input("Enter any number "
-#check_user_input(in
-
-#input2 = input("Enter the last number ")
-#check_user_input(input2)
