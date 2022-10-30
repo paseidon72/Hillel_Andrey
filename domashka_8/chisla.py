@@ -12,6 +12,8 @@ def check_user_input(input):
         val = int(input)
         if(val > 0):
             print("Вы ввели целое положительное число. = ", val)
+        if(val == 0):
+            print("Вы ввели число. = ", val)
         else:
             print("Вы ввели целое отрицательное число. = ", val)
     except ValueError:
