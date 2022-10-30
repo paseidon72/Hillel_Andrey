@@ -5,6 +5,8 @@
 #number1 = input("Enter number and hit enter ")
 #print("Printing type of input value")
 #print("type of number ", type(number1))
+
+
 def check_user_input(input):
     try:
         val = int(input)
@@ -20,15 +22,17 @@ def check_user_input(input):
             else:
                 print("Вы ввели дробное отрицательное число = ", val)
         except ValueError:
-            print("Введенное значение не является числом")
+            print("Вы ввели не корректное число = ", input1)
 
 
 input1 = input("Ввудите ваше секретное число ")
 input1 = input1.replace(',', '.')
 check_user_input(input1)
 
-#input2 = input("Enter any number ")
-#check_user_input(input2)
+
+
+#input2 = input("Enter any number "
+#check_user_input(in
 
 #input2 = input("Enter the last number ")
 #check_user_input(input2)
