@@ -1,42 +1,25 @@
-#s = list(map(float, input('ввести число: ').split()))
+import re
+import nums_from_string
 
-#c = list(map(int, input('ввести число: ').split()))
-
-#print(s)
-#print(c)
-#import re
-
-
-
-#s = [float(s) for s in re.findall(r'-?\d+\.?\d*', input1)]
-def check_user_input(input):
+input1 = input("Введите ваше секретное число ")
+input1 = input1.replace(',', '.')
+s = []
+for t in input1.split():
     try:
-        val = int(input)
-        if(val > 0):
-            print("Вы ввели целое положительное число. = ", val)
-        elif (val == 0):
-            print("Вы ввели число. = ", val)
-        else:
-            print("Вы ввели целое отрицательное число. = ", val)
+        s.append(int(t))
     except ValueError:
-        try:
-            val = float(input)
-            if (val > 0):
-                print("Вы ввели дробное положительное число = ", val)
-            else:
-                print("Вы ввели дробное отрицательное число = ", val)
-        except ValueError:
-            print("Вы ввели не корректное число = ", input1)
+        pass
+    try:
+        s.append(float(t))
+    except ValueError:
+        pass
+print('s split', s)
 
+s1 = [int(s1) for s1 in str.split(input1) if s1.isdigit()]
+print('s1 isdigit', s1)
 
+s2 = nums_from_string.get_nums(input1)
+print('s2 nums', s2)
 
-
-while True:
-    print('-' * 50)
-    input1 = input("Введите ваше секретное число ")
-    input1 = input1.replace(',', '.')
-    check_user_input(input1)
-    print('-' * 50)
-    answer = input('Чтобы выйти пишите слово (выход/exit/quit/e/q):')
-    if answer.upper() in ('ВЫХОД', 'EXIT', 'QUIT', 'E', 'Q'):
-        break
+s3 = [float(s) for s in re.findall(r'-?\d+\.?\d*', input1)]
+print('s3 regex', s3)
