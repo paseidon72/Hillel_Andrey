@@ -25,6 +25,7 @@ for movie in data['movies']:
     sheet[row][3].value = ' '.join(movie['genres'])
     sheet[row][4].value = movie['director']
     sheet[row][5].value = movie['actors']
+    row += 1
 
 book.save('tab.xlsx')
 book.create_sheet()
