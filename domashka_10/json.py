@@ -23,6 +23,5 @@ input_data = {
     ),
 }
 
-
 with open('task_1.json5', 'w') as f:
     json5.dump(input_data, f)

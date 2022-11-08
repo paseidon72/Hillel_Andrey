@@ -1,14 +1,14 @@
-import json5
 import openpyxl
+import json
 
+with open('movies.json') as file:
+    data = json.load(file)
 
-
-
-with open('test.json5') as file:
-    data = json5.load(file)
 
 book = openpyxl.Workbook()
-sheet = book.active
+book.remove(book['Sheet'])
+book.create_sheet(title='sinema', index=0)
+sheet = book['sinema']
 
 sheet['A1'] = 'ID'
 sheet['B1'] = 'TITLE'
@@ -27,5 +27,7 @@ for movie in data['movies']:
     sheet[row][5].value = movie['actors']
     row += 1
 
-book.save('tab.xlsx')
-book.create_sheet()
+
+book.save("my_book.xlsx")
+book.close()
+
