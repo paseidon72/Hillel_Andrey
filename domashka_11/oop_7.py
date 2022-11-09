@@ -34,9 +34,11 @@ class Avto(ABC):
         time.sleep(1)
 
 class truck(Avto):
-    def __init__(self, brand, age, mark, max_load):
+    def __init__(self, brand, age, mark, max_load, color='Red', weight=2500):
         super().__init__(brand, age, mark)
         self.max_load = max_load
+        self.color = color
+        self.weight = weight
 
     def move(self):
         print('«attention»', 'move')
@@ -44,9 +46,11 @@ class truck(Avto):
 
 
 class car(Avto):
-    def __init__(self, brand, age, mark, max_speed):
+    def __init__(self, brand, age, mark, max_speed, color='Blec', weight=2800):
         super().__init__(brand, age, mark)
         self.max_speed = max_speed
+        self.color = color
+        self.weight = weight
 
     def move(self):
         print('move', f'max speed is {self.max_speed} km/ch')
@@ -59,6 +63,8 @@ car_1.load()
 print('-' * 50)
 print('brand', car_1.brand)
 print('mark', car_1.mark)
+print('color', car_1.color)
+print('weight-kg', car_1.weight)
 print('*' *50)
 car_2 = car('bmv', 4, 'sport plus', 600)
 car_2.move()
@@ -68,6 +74,8 @@ car_2.load()
 print('-' * 50)
 print('brand', car_2.brand)
 print('mark', car_2.mark)
+print('color', car_2.color)
+print('weight-kg', car_2.weight)
 print('*' *50)
 truck_1 = truck('bmv', 10, 'sedan', 100)
 truck_1.move()
@@ -78,6 +86,8 @@ print('-' * 50)
 print('brand', truck_1.brand)
 print('mark', truck_1.mark)
 print('max_load-kg', truck_1.max_load)
+print('color', truck_1.color)
+print('weight-kg', truck_1.weight)
 print('*' *50)
 truck_2 = truck('bmv', 15, 'cadet', 1100)
 truck_2.move()
@@ -88,4 +98,6 @@ print('-' * 50)
 print('brand', truck_2.brand)
 print('mark', truck_2.mark)
 print('max_load-kg', truck_2.max_load)
+print('color', truck_2.color)
+print('weight-kg', truck_2.weight)
 print('*' *50)
