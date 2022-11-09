@@ -28,10 +28,6 @@ class Avto(ABC):
     def birthday(self):
         print(f'age', self.age + 1, 'let')
 
-    def load(self):
-        time.sleep(1)
-        print('«load»')
-        time.sleep(1)
 
 class truck(Avto):
     def __init__(self, brand, age, mark, max_load, color='Red', weight=2500):
@@ -43,7 +39,10 @@ class truck(Avto):
     def move(self):
         print('«attention»', 'move')
 
-
+    def load(self):
+        time.sleep(1)
+        print('«load»')
+        time.sleep(1)
 
 class car(Avto):
     def __init__(self, brand, age, mark, max_speed, color='Blec', weight=2800):
@@ -59,7 +58,6 @@ car_1 = car('bmv', 5, 'sport', 500)
 car_1.move()
 car_1.stop()
 car_1.birthday()
-car_1.load()
 print('-' * 50)
 print('brand', car_1.brand)
 print('mark', car_1.mark)
@@ -70,7 +68,6 @@ car_2 = car('bmv', 4, 'sport plus', 600)
 car_2.move()
 car_2.stop()
 car_2.birthday()
-car_2.load()
 print('-' * 50)
 print('brand', car_2.brand)
 print('mark', car_2.mark)
