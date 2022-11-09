@@ -4,13 +4,13 @@
 # Методы move и stop выводят сообщение на экран «move» и «stop»,а birthday увеличивает атрибут age на 1.
 # Атрибуты brand, age и mark являются обязательными при объявлении объекта.
 class Avto:
-    color = True
-    weight = True
 
-    def __init__(self, brand, age, mark):
+    def __init__(self, brand, age, mark, color='Red', weight=2100):
         self.brand = brand
         self.age = age
         self.mark = mark
+        self.color = color
+        self.weight = weight
 
     def move(self):
         print('move')
@@ -22,6 +22,8 @@ class Avto:
         print(f'age', self.age + 1, 'let')
 
 class BMV(Avto):
+    color = True
+    weight = True
     def say(self):
         print('instruction')
 
@@ -33,4 +35,4 @@ mashin.birthday()
 print('brand', mashin.brand)
 print('mark', mashin.mark)
 print('color', mashin.color)
-print('weight', mashin.weight)
+print('weight-kg', mashin.weight)
