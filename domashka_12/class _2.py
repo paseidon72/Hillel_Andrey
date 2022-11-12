@@ -22,7 +22,7 @@ class Stroka(String):
         return f'"{self.first + self.last}"'
 
 
-a = String('New', 'castle')
-b = Stroka('New', 'castle')
+a = String('New', 88)
+b = Stroka('New', 88)
 print(a)
 print(b)
