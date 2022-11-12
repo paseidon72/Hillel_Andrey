@@ -18,9 +18,8 @@ class Avto(ABC):
         self.age = age
         self.mark = mark
 
-    @abstractmethod
     def move(self):
-        ...
+        print('move')
 
     def stop(self):
         print('stop')
