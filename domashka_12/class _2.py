@@ -4,7 +4,7 @@ class String:
         self.last = str(last)
 
     def __sub__(self, other):
-        first = self.first - other.last
+        first = self.first - other.first
         last = self.last - other.last
         return String(first, last)
 
@@ -14,7 +14,7 @@ class String:
 
 class Stroka(String):
     def __add__(self, other):
-        first = self.first + other.last
+        first = self.first + other.first
         last = self.last + other.last
         return Stroka(first, last)
 
