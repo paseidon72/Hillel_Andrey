@@ -1,4 +1,4 @@
-class Segment1(object):
+class Segment1():
 
     def __init__(self, start=0, finish=0):
         self.start = start
