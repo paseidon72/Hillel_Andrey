@@ -1,21 +1,28 @@
-class Segment1():
+from datetime import date
 
-    def __init__(self, start=0, finish=0):
-        self.start = start
-        self.finish = finish
 
-    def __str__(self):
-        return f"{self.start}, {self.finish}"
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def fromBirthYear(cls, name, year):
+        return cls(name, date.today().year - year)
 
     @staticmethod
-    def is_crossed(seg1, seg2):
-        if seg1.finish < seg2.start or seg2.finish < seg1.start:
-            return False
-        return True
+    def isAdult(age):
+        return age > 18
 
 
-s1 = Segment1(2, 5)
-s2 = Segment1(3, 7)
+person1 = Person('mayank', 18)
+person2 = Person.fromBirthYear('mayank', 1996)
+
+print(person1.age)
+print(person2.age)
+
+print(Person.isAdult(18))
 
 
-print(Segment1.is_crossed(s1, s2))
+
+
