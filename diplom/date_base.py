@@ -32,12 +32,15 @@ class DataBasa():
             today = date.today()
             age = today.year - birthday.year
 
-            title = ['Имя', 'Фамилия', 'Отчество', 'Пол', 'Родился', 'Полных лет']
+#            title = ['Имя', 'Фамилия', 'Отчество', 'Пол', 'Родился', 'Полных лет']
             tekst = [name, lastname, surname, sex, birthday, age]
+            # with open("spisok.csv", "w", encoding="utf-8", newline='') as f:
+            #     file_writer = csv.writer(f)
+            #     file_writer.writerow(title)
             with open("spisok.csv", "a", encoding="utf-8", newline='') as f:
                 file_writer = csv.writer(f)
-                for item in (title, tekst):
-                    file_writer.writerow(item)
+                file_writer.writerow(tekst)
+
 
             answer = input('Для завершения введите слово: (выход/exit)\n Для продолжения записи пиши-1: ')
             if answer.upper() in ('ВЫХОД', 'EXIT'):

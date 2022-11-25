@@ -6,3 +6,4 @@ for index, row in enumerate(reader):
     if index > 10:
         break
     print(row)
+
