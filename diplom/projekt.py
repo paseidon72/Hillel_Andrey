@@ -11,8 +11,8 @@ while True:
     lastname = input('Отлично теперь фамилию: ')
     surname = input('Отчество: ')
     sex = input('Укажите пол: ')
-    da1 = input("Введите дату рождения (dd-mm-yyyy)\n")
-    birthday = DT.datetime.strptime(da1, '%d-%m-%Y').date()
+    date1 = input("Введите дату рождения (dd-mm-yyyy)\n")
+    birthday = DT.datetime.strptime(date1, '%d-%m-%Y').date()
     today = date.today()
     age = today.year - birthday.year
     print('Полных лет', age)
