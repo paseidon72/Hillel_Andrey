@@ -23,12 +23,12 @@ while True:
 
     age = death.year - birthday.year
 
-    title = ['Имя', 'Фамилия', 'Отчество', 'Пол', 'Родился', 'Умер', 'Полных лет']
-    tekst = [name, lastname, surname, sex, birthday, death, age]
-    with open("spisok.csv", "a", encoding="utf-8", newline='') as f:
-        file_writer = csv.writer(f)
-        for item in (title, tekst):
-            file_writer.writerow(item)
+    # title = ['Имя', 'Фамилия', 'Отчество', 'Пол', 'Родился', 'Умер', 'Полных лет']
+    # tekst = [name, lastname, surname, sex, birthday, death, age]
+    # with open("spisok.csv", "a", encoding="utf-8", newline='') as f:
+    #     file_writer = csv.writer(f)
+    #     for item in (title, tekst):
+    #         file_writer.writerow(item)
 
 
     # print('Вы ввели данные человека')
