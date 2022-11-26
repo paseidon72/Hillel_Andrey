@@ -8,6 +8,7 @@ while True:
     if not name.isalpha() or name == '':
         print('Неверный ввод')
         continue
+
     lastname = input('Отлично теперь фамилию: ')
     surname = input('Отчество: ')
     sex = input('Укажите пол: ')
@@ -16,6 +17,7 @@ while True:
     today = date.today()
     age = today.year - birthday.year
     print('Полных лет', age)
+
     date2 = input("Введите дату смерти (dd-mm-yyyy)\n")
     death = DT.datetime.strptime(date2, '%d-%m-%Y').date()
     if birthday > death:

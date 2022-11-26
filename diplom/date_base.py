@@ -3,7 +3,6 @@ import datetime as DT
 from datetime import date
 
 class DataBasa():
-
     def __int__(self, name, lastname, surname, sex, birthday, age, death='%d-%m-%Y'):
         self.name = name
         self.lastname = lastname
@@ -13,10 +12,8 @@ class DataBasa():
         self.death = death
         self.age = age
 
-
     def __str__(self):
         return f'{self.name}{self.lastname}{self.surname}{self.sex}{self.age}{self.birthday}{self.death}'
-
 
     def input_data(self):
         while True:
@@ -32,34 +29,25 @@ class DataBasa():
             birthday = DT.datetime.strptime(date1, '%d-%m-%Y').date()
             today = date.today()
             age = today.year - birthday.year
-
             tekst = [name, lastname, surname, sex, birthday, age]
-
             with open("spisok.csv", "a", encoding="utf-8", newline='') as f:
                 file_writer = csv.writer(f)
                 file_writer.writerow(tekst)
-
-
             answer = input('Для завершения введите слово: (выход/exit)\n Для продолжения записи пиши-1: ')
             if answer.upper() in ('ВЫХОД', 'EXIT'):
                 break
 
         return DataBasa(name, lastname, surname, sex, age, birthday)
 
-
     def find(self):
         ...
-
 
     def get_from_file(self):
         ...
 
-
     def get_intu_file(self):
         ...
 
-
     def export_in_json(self):
         ...
-
 
