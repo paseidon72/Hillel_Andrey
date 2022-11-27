@@ -1,9 +1,8 @@
-from date_base import DB
+from date_bases import DB
+
+
 
 def main():
-    data = DB
-    call_function = {1: data.input_data, 2: data.find, 3: data.get_from_file,
-                     4: data.get_intu_file, 5: data.export_in_json}
 
     while True:
         print("1. Ввести новую запись")
@@ -20,9 +19,14 @@ def main():
             continue
         elif int(choice) == 0:
             break
-
-
+        data = DB
+        call_function = {1: data.input_data, 2: data.find, 3: data.get_from_file,
+                         4: data.get_intu_file, 5: data.export_in_json}
         call_function[int(choice)](int(choice))
+
+
+
+
 
 
 
