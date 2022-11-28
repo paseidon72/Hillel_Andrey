@@ -160,8 +160,18 @@ class DB():
 
 
         while True:
-            name1 = input("Введите поиск ")
-            print(name1)
+            name1 = input("Введите поисковый запрос ")
+            world = name1
+            with open("spisok.csv", encoding='utf-8') as f:
+                lines = f.readlines()
+                for line in lines:
+                    if line.find(world) != -1:
+                        print(world, ':запись есть')
+                        print('строка №', lines.index(line))
+                        print('Информация подробно: ', line)
+                        break
+
+
 
 
     def get_from_file(self):
