@@ -134,7 +134,7 @@ class DB():
                         print(name1, ':запись есть')
                         print('строка №', lines.index(line))
                         print('Информация подробно: ', line)
-                        break
+                break
 
 
 
