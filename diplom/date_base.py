@@ -97,40 +97,6 @@ class DB():
         DB.TOTAL_OBJECTS += 1
         input_person = []
 
-
-        # @property
-        # def fool_age():
-        #
-        #     def split_data(data):
-        #         if " " in data:
-        #             return (data.split())
-        #         elif "." in data:
-        #             return (data.split("."))
-        #         elif "/" in data:
-        #             return (data.split("/"))
-        #         elif "-" in data:
-        #             return (data.split("-"))
-        #
-        #     if self.date_of_death:
-        #         day_b, month_b, year_b = split_data(self.date_of_birth)
-        #         day_d, month_d, year_d = split_data(self.date_of_death)
-        #         birthday = datetime.date(int(year_b), int(month_b), int(day_b))
-        #         print(birthday)
-        #         death = datetime.date(int(year_d), int(month_d), int(day_d))
-        #         print(death)
-        #         self.age = int(death.strftime("%Y")) - int(birthday.strftime("%Y"))
-        #         print(self.age)
-        #         return self.age
-        #     else:
-        #         day_b, month_b, year_b = split_data(self.date_of_birth)
-        #         birthday = datetime.date(int(year_b), int(month_b), int(day_b))
-        #         print(birthday)
-        #         today = datetime.date.today()
-        #         print(today)
-        #         self.age = int(today.strftime("%Y")) - int(birthday.strftime("%Y"))
-        #         print(self.age)
-        #         return self.age
-
         data_dict = {f'{self.name} {self.surname} {self.otchestvo}': [self.gender, self.date_of_birth,
                                                                       self.date_of_death, self.age]}
         data_dict.update(data_dict)
@@ -161,12 +127,11 @@ class DB():
 
         while True:
             name1 = input("Введите поисковый запрос ")
-            world = name1
             with open("spisok.csv", encoding='utf-8') as f:
                 lines = f.readlines()
                 for line in lines:
-                    if line.find(world) != -1:
-                        print(world, ':запись есть')
+                    if line.find(name1) != -1:
+                        print(name1, ':запись есть')
                         print('строка №', lines.index(line))
                         print('Информация подробно: ', line)
                         break
