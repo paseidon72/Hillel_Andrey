@@ -1,4 +1,5 @@
-import datetime
+import pandas as pd
+import glob
 import csv
 import json
 import datetime as DT
@@ -140,7 +141,19 @@ class DB():
 
 
     def get_from_file(self):
-        print('vtoroe')
+
+        while True:
+            files = glob.glob("*.csv")
+            print('файлы для обьединения:', files)
+            combined = pd.DataFrame()
+            for file in files:
+                data = pd.read_csv(file)
+                data['filename'] = file
+                combined = pd.concat([combined, data])
+                combined.to_csv('combined.csv', index=False, sep=';')
+                print('файлы обьеденены в одну базу данных')
+            break
+
 
     def get_intu_file(self):
         print('vtoroe')
