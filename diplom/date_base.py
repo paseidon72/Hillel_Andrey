@@ -5,6 +5,7 @@ import json
 import datetime as DT
 from datetime import date
 
+
 class DB():
     TOTAL_OBJECTS = 0
 
@@ -156,7 +157,16 @@ class DB():
 
 
     def get_intu_file(self):
-        print('vtoroe')
+
+        while True:
+            with open("combined.csv", encoding="utf-8") as f:
+                file_reader = csv.reader(f)
+                data = list(file_reader)
+                data11 = open("combined.txt", "w", encoding="utf-8")
+                data11.write(f'{data}')
+                data11.close()
+                print('БД сохранена в формате txt')
+            break
 
     def export_in_json(self):
         print('vtoroe')
