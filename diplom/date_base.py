@@ -169,5 +169,22 @@ class DB():
             break
 
     def export_in_json(self):
-        print('vtoroe')
+
+        while True:
+            d = {}
+            with open("combined.txt") as file:
+                for line in file:
+                    key, *value = line.split()
+                    d[key] = value
+                    print(value)
+
+
+            with open("combined.json", "w", encoding="utf-8") as f:
+                json.dump(value, f, indent=4)
+                print('БД готова для передачи')
+            break
+
+
+
+
 
