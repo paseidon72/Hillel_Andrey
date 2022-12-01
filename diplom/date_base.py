@@ -154,11 +154,7 @@ class DB():
     def __str__(self):
         return f'{self.name}{self.otchestvo}{self.surname}{self.gender}{self.age}{self.date_of_birth}{self.date_of_death}'
 
-
-
-
     def find(self):
-
 
         while True:
             name1 = input("Введите поисковый запрос ")
@@ -170,9 +166,6 @@ class DB():
                         print('строка №', lines.index(line))
                         print('Информация подробно: ', line)
                 break
-
-
-
 
     def get_from_file(self):
 
@@ -187,6 +180,8 @@ class DB():
                 combined.to_csv('combined.csv', index=False, sep=';')
                 print('файлы обьеденены в одну базу данных')
             break
+
+
 
 
     def get_intu_file(self):
