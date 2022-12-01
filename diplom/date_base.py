@@ -76,12 +76,45 @@ class DB():
                 break
         while True:
             gender = input("введите пол: мужчина - 'm', женщина - 'f' ")
-            if gender not in ('mf') and len(gender) > 1:
+            if len(gender) > 1 or gender not in 'mf':
                 print('Неверный ввод')
                 continue
             else:
                 break
 
+        def fool_age(date_of_birth, date_of_death=""):
+
+            def split_data(data):
+                if " " in data:
+                    return (data.split(" "))
+                elif "." in data:
+                    return (data.split("."))
+                elif "/" in data:
+                    return (data.split("/"))
+                elif "-" in data:
+                    return (data.split("-"))
+
+            if date_of_death:
+                # day_b, month_b, year_b = (split_data(date_of_birth))
+                # day_d, month_d, year_d = (split_data(date_of_death))
+                # birthday = date(int(year_b), int(month_b), int(day_b))
+                #
+                # death = date(year_d, month_d, day_d)
+
+                age = int(death.strftime("%Y%m%d")) // 10000 - int(birthday.strftime("%Y%m%d")) // 10000
+                print(f"Полных лет {age}")
+                return age
+            else:
+                # day_b, month_b, year_b = (split_data(date_of_birth))
+                # birthday = date(int(year_b), int(month_b), int(day_b))
+                #
+                # today = date.today()
+
+                age = int(today.strftime("%Y%m%d")) // 10000 - int(birthday.strftime("%Y%m%d")) // 10000
+                print(f"Полных лет {age}")
+                return age
+
+        age = fool_age(date_of_birth, date_of_death)
 
         return DB(name, date_of_birth, gender, age, surname, otchestvo, date_of_death)
 
