@@ -183,7 +183,6 @@ class DB():
 
 
 
-
     def get_intu_file(self):
 
         while True:
