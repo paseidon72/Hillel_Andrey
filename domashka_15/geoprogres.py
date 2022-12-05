@@ -5,10 +5,10 @@ def geo_prog(start, a, chislo):
 
 y = geo_prog(1, 8, 4)
 
-print("_" * 40)
+print("_" * 50)
 print(y)
 
 for item in y:
     print(item)
 
-print("_" * 40)
+print("_" * 50)
