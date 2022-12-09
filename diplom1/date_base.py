@@ -81,8 +81,8 @@ class DB(object):
                 json_dict[self.name_fields[5]] = person.sex
                 json_data.append(json_dict)
 
-            with open(f_name, 'w') as f:
-                json.dump(json_data, f)
+            with open(f_name, 'w', encoding="utf-8") as f:
+                json.dump(json_data, f, indent=4)
             print(f"База данных импортирована в файле {f_name}")
             time.sleep(2)
 
