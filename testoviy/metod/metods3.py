@@ -6,7 +6,7 @@ class Birds:
         self._name = name
         self._id = id
         self._age = age
-        Birds.objInstancesCount = Birds.objInstancesCount + 1
+        Birds.objInstancesCount += 1
 
         # getter
 

@@ -31,9 +31,10 @@ class Duck(Birds):
         print("Вид подкласса: " + Duck.species)
         print("Скорость полета: " + str(self.__fly_speed))
         print("Высота полета: " + str(self.__fly_height))
-        print("Количество объектов класса " + Birds.ruClassName + ": " + str(Birds.objInstancesCount))
+        print("Номер объекта класса " + Birds.ruClassName + ": " + str(Birds.objInstancesCount))
 
 d = Duck('Birds', 22, 2, 110, 5)
 d.info()
+print('*' * 50)
 d2 = Duck('Birds', 25, 3, 115, 6)
 d2.info()
