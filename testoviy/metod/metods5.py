@@ -21,6 +21,7 @@ class GalaBacklane(Birds):
         print('*' * 50)
         print("Вид подкласса: " + GalaBacklane.species)
         print("Количество особей: " + str(self.__population))
+        print("Номер объекта класса " + Birds.ruClassName + ": " + str(Birds.objInstancesCount))
 
 g = GalaBacklane("Birds", 22, 2, 60)
 g.info()
