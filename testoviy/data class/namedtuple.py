@@ -13,3 +13,4 @@ auto_parts = ('1234', 'Ford Engine', 1200.00, 10)
 print(auto_parts[2])
 id_num, desc, cost, amount = auto_parts
 print(id_num)
+print(auto_parts[1])
